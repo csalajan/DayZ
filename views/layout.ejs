@@ -159,7 +159,7 @@
     <!--SCRIPTS END-->
     <script>
     $(function() {
-      <% if (message) { %>
+      <% if (message !== 'undefined') { %>
       var message = <%= message %>
       $('[rel="popover"]').popover({
               trigger: 'manual',
