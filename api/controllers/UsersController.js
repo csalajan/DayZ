@@ -121,11 +121,11 @@ var UsersController = {
 	    			});
 
 	    			req.session.destroy();
-	    			res.json(200, {action: 'logout'});
+	    			res.view('home/index');
 	    		});
 	    	});
     	} else {
-	    		res.json(200, {action: 'logout'});
+	    		res.view('home/index');
 	    	}
     },
     profile: function(req, res) {
