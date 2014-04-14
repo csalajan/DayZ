@@ -19,17 +19,9 @@
   socket.on('connect', function socketConnected() {
 
     // Listen for Comet messages from Sails
-    socket.on('message', function messageReceived(message) {
+    socket.on('message', socketHandler);
 
-      ///////////////////////////////////////////////////////////
-      // Replace the following with your own custom logic
-      // to run when a new message arrives from the Sails.js
-      // server.
-      ///////////////////////////////////////////////////////////
-      log('New comet message received :: ', message);
-      //////////////////////////////////////////////////////
-
-    });
+      socket.get('/Users/subscribe');
 
 
     ///////////////////////////////////////////////////////////
@@ -69,3 +61,7 @@
   window.io
 
 );
+
+function socketHandler(data) {
+  console.log(data);
+}
