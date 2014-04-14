@@ -3,13 +3,13 @@
 		<a href="survivor/create" class="btn btn-primary">Create Survivor</a>
 	</div>
 	<% } else { %>
-		<form role="form" action="?action=updateChar" method="post">	
+		<form role="form" action="survivor/update" method="post">	
 			<div class="row">	
 				<div class="col-sm-3 col-sm-offset-1">
 					<h3>Character Details</h3>
 					<div class="form-group">
 						<label for="name">Character Name</label>
-						<input type="text" class="form-control" name="name" value="" />
+						<input type="text" class="form-control" name="name" value="<%= survivor.name %>" />
 					</div>
 					<div class="form-group">
 						<label for="blood">Blood Type</label>
@@ -33,14 +33,14 @@
 					<h3>Location Details</h3>
 					<div class="form-group">
 						<label for="location">Nearest City</label>
-						<input type="text" class="form-control" name="location" value="" />
+						<input type="text" class="form-control" name="location" value="<%= survivor.location %>" />
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-sm-2 col-sm-offset-8">
 					<input type="submit" name="submit" class="btn btn-primary" value="Update Character" />
-					<a href="?action=dead&id=" class="btn btn-danger">Dead</a>
+					<a href="survivor/dead" class="btn btn-danger">Dead</a>
 				</div>
 			</div>
 		</form>

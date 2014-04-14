@@ -135,8 +135,8 @@ var UsersController = {
     		} else if (survivor.length == 0) {
     			res.view('home/user/profile');
     		} else {
-    			res.json(200, {survivor: survivor});
-    			//res.view('home/user/profile', {survivor: survivor});
+    			//res.json(200, {survivor: survivor});
+    			res.view('home/user/profile', {survivor: survivor});
     		}
     	});
     },

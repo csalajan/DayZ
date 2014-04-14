@@ -61,6 +61,14 @@ module.exports.routes = {
     controller: 'SurvivorsController',
     action: 'create',
   },
+  '/survivor/update': {
+    controller: 'SurvivorsController',
+    action: 'update',
+  },
+  '/survivor/dead': {
+    controller: 'SurvivorsController',
+    action: 'dead',
+  },
 
   /*
   // But what if you want your home page to display
