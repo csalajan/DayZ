@@ -39,6 +39,10 @@ module.exports.routes = {
     controller: 'UsersController',
     action: 'login',
   },
+  '/logout': {
+    controller: 'UsersController',
+    action: 'logout',
+  },
   '/register': {
     view: 'home/register',
   },
