@@ -32,13 +32,6 @@ var Users = {
 			type: 'STRING',
 			defaultsTo: '0'
 		},
-		blood: {
-			type: 'STRING',
-		},
-		location: {
-			type: 'STRING',
-		},
-
 		toJSON: function() {
 	        var obj = this.toObject();
 	        
