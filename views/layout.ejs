@@ -63,14 +63,44 @@
               </ul>
             </li>
           </ul>
-          <div id="login" class="pull-right">
-              <div class="errors"></div>
-              <form class="navbar-search" role="form" id="loginForm" action="login/login">
-                  <input type="text" name="username" class="span2" placeholder="username">
-                  <input type="password" name="password" class="span2" placeholder="password">
-                  <input type="submit" value="Login" class="btn btn-sm"/>
-              </form>
-          </div>          
+          <div id="login" class="nav navbar-nav navbar-right" rel="popover">
+            <% if (req.session.user) { %>
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a href="#" id="profile" class="dropdown-toggle" data-toggle="dropdown">My Profile<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="users?profile">My Profile</a></li>
+                  <li><a href="login?logout">Log Out</a></li>
+                </ul>
+              </li>
+            </ul>
+              <% if (req.session.user.admin) { %>
+                <ul class="nav navbar-nav">
+                  <li class="dropdown">
+                    <a href="#" id="admin" class="dropdown-toggle" data-toggle="dropdown">Admin<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href='route?userManage'>User Management</a></li>
+                      <li><a href='#'>System Configurations</a></li>
+                    </ul>    
+                  </li>
+                </ul>
+              <% } %>
+            <% } else { %>
+            <ul class="nav navbar-nav">
+
+              <li><a href="route?register">Register</a></li>
+              <li>&nbsp;</li>
+              <li>
+                <form class="navbar-search" role="form" id="loginForm" action="login/login">
+                    <input type="text" name="username" class="span2" placeholder="username">
+                    <input type="password" name="password" class="span2" placeholder="password">
+                    <input type="submit" value="Login" class="btn"/>
+                    <div class="errors"></div>
+                </form>
+              </li>
+            </ul>
+            <% } %>
+          </div>        
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
