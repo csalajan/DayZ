@@ -38,7 +38,7 @@ module.exports.routes = {
   '/login': {
     controller: 'UsersController',
     action: 'login',
-  }
+  },
 
   /*
   // But what if you want your home page to display
