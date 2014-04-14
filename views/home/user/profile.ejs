@@ -1,0 +1,47 @@
+<% if (!survivor) { %>
+	<div class="col-sm-4 col-sm-offset-4">
+		<a href="?action=newChar" class="btn btn-primary">Create Survivor</a>
+	</div>
+	<% } else { %>
+		<form role="form" action="?action=updateChar" method="post">	
+			<div class="row">	
+				<div class="col-sm-3 col-sm-offset-1">
+					<h3>Character Details</h3>
+					<div class="form-group">
+						<label for="name">Character Name</label>
+						<input type="text" class="form-control" name="name" value="" />
+					</div>
+					<div class="form-group">
+						<label for="blood">Blood Type</label>
+						<select name="blood" class="form-control">
+							<option value=""></option>
+							<option value="O-" >O-</option>
+							<option value="O+" >O+</option>
+							<option value="A-" >A-</option>
+							<option value="A+" >A+</option>
+							<option value="B-" >B-</option>
+							<option value="B+" >B+</option>
+							<option value="AB-" >AB-</option>
+							<option value="AB+" >AB+</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-3 col-sm-offset-1">
+					<h3>Item Details</h3>
+				</div>
+				<div class="col-sm-2 col-sm-offset-1">
+					<h3>Location Details</h3>
+					<div class="form-group">
+						<label for="location">Nearest City</label>
+						<input type="text" class="form-control" name="location" value="" />
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-2 col-sm-offset-8">
+					<input type="submit" name="submit" class="btn btn-primary" value="Update Character" />
+					<a href="?action=dead&id=" class="btn btn-danger">Dead</a>
+				</div>
+			</div>
+		</form>
+		<?php } ?>

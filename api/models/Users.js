@@ -16,11 +16,6 @@ var Users = {
 			type: 'TEXT',
 		},
 		salt: 'STRING',
-		
-		charName: {
-			type: 'STRING',
-			defaultsTo: '',
-		},
 		emailAddress: {
 			required: true,
 			type: 'EMAIL',
