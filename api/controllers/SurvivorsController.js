@@ -9,7 +9,7 @@ var SurvivorsController = {
 			if (err) {
 				req.json(400, {error: err});
 			} else {
-				survivor.update(req.params.all()).done(function(err, survivor) {
+				Survivors.update(survivor.id, req.params.all(), function(err, survivor) {
 					res.redirect('profile');
 				});
 			}
