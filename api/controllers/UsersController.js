@@ -129,7 +129,7 @@ var UsersController = {
 	    	}
     },
     profile: function(req, res) {
-    	Survivors.find().where({userId: req.session.user.id}).where({dead: false}).exec(function(err, survivor) {
+    	Survivors.findOne().where({userId: req.session.user.id}).where({dead: false}).exec(function(err, survivor) {
     		if (err) {
     			res.send(401, {error: err});
     		} else if (survivor.length == 0) {
