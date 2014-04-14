@@ -132,7 +132,7 @@ var UsersController = {
     	Survivors.find().where({userId: req.session.user.id}).where({dead: false}).exec(function(err, survivor) {
     		if (err) {
     			res.send(401, {error: err});
-    		} else if (!survivor) {
+    		} else if (survivor.length == 0) {
     			res.view('home/user/profile');
     		} else {
     			res.json(200, {survivor: survivor});
