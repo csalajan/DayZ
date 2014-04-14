@@ -52,6 +52,10 @@ module.exports.routes = {
     controller: 'UsersController',
     action: 'profile',
   },
+  '/events': {
+    controller: 'EventsController',
+    action: 'display',
+  },
 
 
 
@@ -68,6 +72,12 @@ module.exports.routes = {
   '/survivor/dead': {
     controller: 'SurvivorsController',
     action: 'dead',
+  },
+
+  // Event Routes
+  '/event/create': {
+    controller: 'EventsController',
+    action: 'create',
   },
 
   /*
