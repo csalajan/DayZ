@@ -2,7 +2,7 @@ var Events = {
 	attributes: {
 		survivorId: {
 			type: 'STRING',
-			required: truem
+			required: true,
 		},
 		location: {
 			type: 'STRING',
