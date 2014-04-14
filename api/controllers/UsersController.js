@@ -66,7 +66,9 @@ var UsersController = {
     	Users.findOneByUsername(username).done(function(err, usr)  {
     		if (err) {
     			res.json(500, {error: error});
-    		} else  {
+    		} else if (!usr) {
+    			res.json(200, {error: 'Invalid Username / Password Combination'});
+    		} else {
 
 	   			if (password) {
 	    			var crypto = require('crypto');
