@@ -1,7 +1,6 @@
 var Survivors = {
 	attributes: {
 		name: {
-			required: true,
 			type: 'STRING',
 		},
 		location: {

@@ -1,7 +1,6 @@
-<%= typeof survivor %>
 <% if (typeof survivor == 'undefined') { %>
 	<div class="col-sm-4 col-sm-offset-4">
-		<a href="?action=newChar" class="btn btn-primary">Create Survivor</a>
+		<a href="survivor/create" class="btn btn-primary">Create Survivor</a>
 	</div>
 	<% } else { %>
 		<form role="form" action="?action=updateChar" method="post">	

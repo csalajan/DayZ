@@ -35,6 +35,8 @@ module.exports.routes = {
   '/': {
     view: 'home/index'
   },
+
+  // User Routes
   '/login': {
     controller: 'UsersController',
     action: 'login',
@@ -49,6 +51,15 @@ module.exports.routes = {
   '/profile': {
     controller: 'UsersController',
     action: 'profile',
+  },
+
+
+
+  // Survivor Routes
+
+  '/survivor/create': {
+    controller: 'SurvivorsController',
+    action: 'create',
   },
 
   /*
