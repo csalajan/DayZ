@@ -21,7 +21,7 @@ var SurvivorsController = {
 			survivor.save(function(err, survivor) {
 				res.redirect('profile');
 			});
-		}
+		});
 	}
 
 }
