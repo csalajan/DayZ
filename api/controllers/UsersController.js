@@ -67,7 +67,8 @@ var UsersController = {
     		if (err) {
     			res.json(500, {error: error});
     		} else if (!usr) {
-    			res.json(200, {error: 'Invalid Username / Password Combination'});
+    			//res.json(200, {error: 'Invalid Username / Password Combination'});
+    			res.view('home/index', {message: 'Invalid Username / Password Combination'});
     		} else {
 
 	   			if (password) {
@@ -90,14 +91,17 @@ var UsersController = {
 		    					username: user.username
 
 		    				});
-		    				res.json(200, {action: 'login', user: user});
+		    				//res.json(200, {action: 'login', user: user});
+		    				res.view('home/index');
 	    				});
 	    				
 	    			} else {
-	    				res.json(401, {error: 'Invalid Username / Password Combination'});
+	    				//res.json(401, {error: 'Invalid Username / Password Combination'});
+	    				res.view('home/index', {message: 'Invalid Username / Password Combination'});
 	    			}
 	    		} else {
-	    			res.json(401, {error: 'Invalid Username / Password Combination'});
+	    			//res.json(401, {error: 'Invalid Username / Password Combination'});
+	    			res.view('home/index', {message: 'Invalid Username / Password Combination'});
 	    		}
 						
     		}

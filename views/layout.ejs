@@ -157,5 +157,20 @@
 
     <!--SCRIPTS-->
     <!--SCRIPTS END-->
+    <script>
+    $(function() {
+      var message = <%= message %> || null;
+      if (message !== null) {
+        $('[rel="popover"]').popover({
+                trigger: 'manual',
+                html: true,
+                placement: 'bottom',
+                content: message,
+            });
+          $('[rel="popover"]').popover('show');
+          $('.popover-content').addClass('alert alert-warning alert-login');
+      }
+    });
+    </script>
   </body>
 </html>
