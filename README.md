@@ -1,2 +1,1 @@
-# dayzjournal
-### a Sails application
+# DayZ Journal App
