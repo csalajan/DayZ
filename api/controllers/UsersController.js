@@ -129,13 +129,14 @@ var UsersController = {
 	    	}
     },
     profile: function(req, res) {
-    	Survivors.find().where({userId: req.session.user.id}).where({dead: false}).done(function(err, survivor) {
+    	Survivors.find().where({userId: req.session.user.id}).where({dead: false}).exec(function(err, survivor) {
     		if (err) {
     			res.send(401, {error: err});
     		} else if (!survivor) {
     			res.view('home/user/profile');
     		} else {
-    			res.view('home/user/profile', {survivor: survivor});
+    			res.json(200, {survivor: survivor});
+    			//res.view('home/user/profile', {survivor: survivor});
     		}
     	});
     },
