@@ -2,7 +2,7 @@ var EventsController = {
 	display: function(req, res) {
 		Survivors.findOne().where({userId: req.session.user.id}).where({dead: false}).done(function(err, survivor) {
 			Events.find().where({survivorId: survivor.id}).done(function(err, events) {
-				res.view('user/events', {events: events, survivor: survivor});
+				res.view('home/user/events', {events: events, survivor: survivor});
 			});
 		});
 	},
