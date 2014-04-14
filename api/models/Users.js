@@ -42,7 +42,7 @@ var Users = {
 		},
 		location: {
 			type: 'STRING',
-		}
+		},
 
 		toJSON: function() {
 	        var obj = this.toObject();
