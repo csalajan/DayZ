@@ -39,6 +39,9 @@ module.exports.routes = {
     controller: 'UsersController',
     action: 'login',
   },
+  '/register': {
+    view: 'home/register',
+  },
 
   /*
   // But what if you want your home page to display
