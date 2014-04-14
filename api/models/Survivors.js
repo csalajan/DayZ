@@ -4,6 +4,17 @@ var Survivors = {
 			type: 'STRING',
 			defaultsTo: '',
 		},
+		ethnicity: {
+			type: 'STRING',
+			defaultsTo: '',
+		},
+		sex: {
+			type: 'STRING',
+		},
+		spawned: {
+			type: 'STRING',
+			defaultsTo: '',
+		},
 		location: {
 			type: 'STRING',
 			defaultsTo: '',
