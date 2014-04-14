@@ -1,0 +1,2 @@
+# dayzjournal
+### a Sails application
