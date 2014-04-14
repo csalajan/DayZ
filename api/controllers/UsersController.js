@@ -120,7 +120,7 @@ var UsersController = {
 						username: user.username
 	    			});
 
-	    			req.session.destroy();
+	    			req.session.user = null;
 	    			res.view('home/index');
 	    		});
 	    	});
