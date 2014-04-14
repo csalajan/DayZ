@@ -27,7 +27,7 @@ module.exports.adapters = {
     module: 'sails-mongo',
     url: process.env.DB_URL,
     schema: true,
-  }
+  },
 
   // MySQL is the world's most popular relational database.
   // Learn more: http://en.wikipedia.org/wiki/MySQL
